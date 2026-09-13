@@ -5,6 +5,7 @@
       <stop offset="1" stop-color="#1d4e8f"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <path d="M18 20h28M18 32h28M18 44h20" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <polygon points="32,2 58,16 58,48 32,62 6,48 6,16" fill="url(#g)"/>
+  <path d="M13 16 L23 24 L13 32 L23 40 L13 48 M27 16 L37 24 L27 32 L37 40 L27 48 M41 16 L51 24 L41 32 L51 40 L41 48"
+        fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -8,8 +8,19 @@ contact/quote-request form. Supports light and dark mode.
 **Stack:** plain HTML + CSS + vanilla JS. No framework, no build step, no
 `node_modules`, nothing to update or go stale. Any static host serves it as-is.
 
-**Live:** https://filtrica.onrender.com (Render static site, auto-deploys on
-every push to this branch).
+**Live:** https://filtrica-v2.onrender.com (Render static site, auto-deploys on
+every push to this branch). This is the navy/blue color-scheme variant of
+the main Filtrica site.
+
+## Brand assets
+
+The hexagonal pleated-media mark used in the nav/footer/favicon is defined
+inline (as CSS-themed SVG) in `index.html` and `favicon.svg`, so it already
+adapts to light/dark mode and this branch's accent color automatically. For
+uses outside the site (docs, social previews, print), `brand/` has the full
+FILTRICA / PRECISION FILTER lockup as static files: `logo-on-white.svg`,
+`logo-on-black.svg`, and two transparent versions (`logo-transparent-dark-ink.svg`
+for light surfaces, `logo-transparent-light-ink.svg` for dark surfaces).
 
 ## Preview locally
 
