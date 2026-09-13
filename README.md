@@ -6,7 +6,10 @@ technology diagram, products, industries served, testimonials, and a
 contact/quote-request form. Supports light and dark mode.
 
 **Stack:** plain HTML + CSS + vanilla JS. No framework, no build step, no
-`node_modules`, nothing to update or go stale. Vercel serves it as-is.
+`node_modules`, nothing to update or go stale. Any static host serves it as-is.
+
+**Live:** https://filtrica.onrender.com (Render static site, auto-deploys on
+every push to this branch).
 
 ## Preview locally
 
@@ -43,14 +46,19 @@ silently failing.
 The form also includes a hidden honeypot field to cut down on bot spam
 without adding a CAPTCHA.
 
-## Deploying to Vercel
+## Deployment
 
-This is a static site with no build command:
+Live on **Render** as a static site (https://filtrica.onrender.com), linked
+directly to this GitHub repo/branch — auto-deploy is on, so every push
+redeploys automatically with no further action needed. No build command is
+actually required (it's plain static files); Render's static-site config
+just needs a command to run (a no-op `echo`) and a publish path of `.` (repo
+root).
 
-1. Import the GitHub repo in Vercel (or run `vercel` from this directory).
-2. Framework preset: **Other** — no build command, output directory: `.` (root).
-3. Every push to the connected branch redeploys automatically — no further
-   maintenance required.
+To move it or add another host later, this is a directory of plain static
+files, so any static host works the same way (Vercel, Netlify, GitHub Pages,
+Cloudflare Pages, S3+CDN, etc.) — point the host at the repo root with no
+build command.
 
 ## Replacing placeholder content
 
@@ -82,5 +90,4 @@ script.js    – theme toggle, mobile nav, scroll-spy, reveal animations, form s
 config.js    – the one setting you must fill in (Web3Forms access key)
 favicon.svg  – site icon
 robots.txt   – allow-all crawling
-vercel.json  – security headers + static asset caching
 ```
