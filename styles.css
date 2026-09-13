@@ -780,6 +780,93 @@ h2.section-title {
   font-size: var(--fs-xs);
 }
 
+/* ---------- Team ---------- */
+.team-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-card .avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--surface-alt);
+  border: var(--border-w) solid var(--border);
+  display: grid;
+  place-items: center;
+  margin: 0 auto var(--sp-4);
+}
+
+.team-card .avatar svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--text-faint);
+}
+
+.team-card h3 {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.team-role {
+  display: block;
+  margin-top: var(--sp-1);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-500);
+}
+
+.team-card p {
+  margin-top: var(--sp-3);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.team-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+.team-links a {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-pill);
+  border: var(--border-w) solid var(--border);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  transition: border-color var(--transition);
+}
+
+.team-links a:hover {
+  border-color: var(--border-strong);
+}
+
+.team-links a svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--text-muted);
+}
+
 /* ---------- Testimonials ---------- */
 .testimonial-grid {
   display: grid;
@@ -963,6 +1050,35 @@ h2.section-title {
 .field textarea {
   resize: vertical;
   min-height: 110px;
+}
+
+.field input[type="file"] {
+  padding: 0.55rem 0.6rem;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.field input[type="file"]::file-selector-button {
+  margin-right: var(--sp-3);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: var(--border-w) solid var(--border-strong);
+  background: var(--surface-alt);
+  color: var(--text);
+  font-weight: 600;
+  font-size: var(--fs-xs);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.field input[type="file"]::file-selector-button:hover {
+  background: var(--surface-sunken);
+}
+
+.field-hint {
+  margin-top: var(--sp-2);
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
 }
 
 .field input:focus,

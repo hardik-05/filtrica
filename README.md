@@ -46,6 +46,15 @@ silently failing.
 The form also includes a hidden honeypot field to cut down on bot spam
 without adding a CAPTCHA.
 
+### File attachments
+
+The quote form lets visitors attach one file (PDF, Word doc, or image) —
+useful for a facility drawing or spec sheet. This is submitted as normal
+multipart form data straight to Web3Forms (no code/server needed), which
+delivers it as an email attachment. The form checks client-side that the
+file is under 5MB before sending; if Web3Forms' own limit on your plan is
+different, adjust `MAX_FILE_BYTES` in `script.js` to match.
+
 ## Deployment
 
 Live on **Render** as a static site (https://filtrica.onrender.com), linked
@@ -67,13 +76,17 @@ the placeholders that must not go live as-is are wrapped in `[brackets]`:
 
 - Company name ("Filtrica"), tagline and copy in the `<header>`, `#home` and
   `#about` sections.
-- `#contact` section: `[Street Address, City, Country]`, `[+1 000 000 0000]`,
-  and the `info@filtrica.example` address/link (this is only a page-footer
-  display address — it is **not** where form submissions go; that's whatever
-  inbox you tied to your Web3Forms key above).
+- `#contact` section: `[+1 000 000 0000]` and the `info@filtrica.example`
+  address/link (this is only a page-footer display address — it is **not**
+  where form submissions go; that's whatever inbox you tied to your Web3Forms
+  key above). The office address is already filled in.
 - Testimonials and the "What Our Customers Say" section are generic,
   role-only sample copy — swap in real customer quotes when you have them.
 - Social link(s) in the contact card (`href="#"` placeholders).
+- `#team` section: 6 placeholder profiles (`[Full Name]`, a role, a 2–3 line
+  bio). Each has a LinkedIn link (`href="#"`) and an email link
+  (`person1@filtrica.example` … `person6@filtrica.example`) — replace both
+  per person, and remove any cards you don't need.
 
 No images were sourced from external stock-photo services — every visual
 (hero graphic, facility illustration, filtration-stage icons) is a hand-built

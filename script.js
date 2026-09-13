@@ -163,6 +163,17 @@
         return;
       }
 
+      var MAX_FILE_BYTES = 5 * 1024 * 1024;
+      var fileInput = form.elements["attachment"];
+      var attachedFile = fileInput && fileInput.files && fileInput.files[0];
+      if (attachedFile && attachedFile.size > MAX_FILE_BYTES) {
+        setStatus(
+          "error",
+          "That file is over 5MB — please attach a smaller file, or remove it and send the details in the message instead."
+        );
+        return;
+      }
+
       var formData = new FormData(form);
       formData.append("access_key", accessKey);
 
