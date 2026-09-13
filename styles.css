@@ -52,8 +52,8 @@
   --brand-600: #0d5f9c;
   --brand-500: #1073b8;
   --brand-400: #2e94d6;
-  --accent-500: #0fa9ac;
-  --accent-400: #2fc4c3;
+  --accent-500: #1d4e8f;
+  --accent-400: #3f74c4;
 
   --brand-contrast: #ffffff;
   --success-500: #1c9a5b;
@@ -67,7 +67,7 @@
 
   --grid-line: rgba(19, 26, 34, 0.06);
   --particle: #94a3ac;
-  --clean-glow: rgba(15, 169, 172, 0.35);
+  --clean-glow: rgba(29, 78, 143, 0.35);
 
   color-scheme: light;
 }
@@ -89,8 +89,8 @@
     --brand-600: #79bcec;
     --brand-500: #4fa4e3;
     --brand-400: #3d8fd0;
-    --accent-500: #2fd9d6;
-    --accent-400: #1fb8b6;
+    --accent-500: #5b8def;
+    --accent-400: #3f6fd1;
 
     --brand-contrast: #06131c;
     --success-500: #35c983;
@@ -104,7 +104,7 @@
 
     --grid-line: rgba(234, 240, 245, 0.07);
     --particle: #6b7885;
-    --clean-glow: rgba(47, 217, 214, 0.28);
+    --clean-glow: rgba(91, 141, 239, 0.28);
 
     color-scheme: dark;
   }
@@ -126,8 +126,8 @@
   --brand-600: #79bcec;
   --brand-500: #4fa4e3;
   --brand-400: #3d8fd0;
-  --accent-500: #2fd9d6;
-  --accent-400: #1fb8b6;
+  --accent-500: #5b8def;
+  --accent-400: #3f6fd1;
 
   --brand-contrast: #06131c;
   --success-500: #35c983;
@@ -141,7 +141,7 @@
 
   --grid-line: rgba(234, 240, 245, 0.07);
   --particle: #6b7885;
-  --clean-glow: rgba(47, 217, 214, 0.28);
+  --clean-glow: rgba(91, 141, 239, 0.28);
 
   color-scheme: dark;
 }
@@ -517,6 +517,33 @@ h2.section-title {
   letter-spacing: -0.02em;
   line-height: 1.08;
   color: var(--text);
+}
+
+.hero-stage-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: var(--sp-4);
+}
+
+.hero-stage {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-alt);
+  border: var(--border-w) solid var(--border);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-500);
+}
+
+.hero-stage-arrow {
+  color: var(--text-faint);
+  font-size: var(--fs-sm);
 }
 
 .hero-sub {
@@ -999,6 +1026,20 @@ h2.section-title {
 
 .social-row a:hover {
   border-color: var(--border-strong);
+}
+
+.map-frame {
+  margin-top: var(--sp-6);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: var(--border-w) solid var(--border);
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  display: block;
 }
 
 .form-card {
